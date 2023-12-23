@@ -5,4 +5,6 @@
 
  The overall project is built based on LibSignal: https://darl-libsignal.github.io/
 
+ Please fill your Open-AI api-key in the file `sim2real_trainer.py` to make sure the conversation to language agent is successfully connected!
+
  
