@@ -1,0 +1,22 @@
+__pycache__/
+*.DS_Store
+.idea/
+.vscode/
+data/output_data/*
+!data/output_data/tsc/cityflow_dqn/cityflow1x1/test/model/*
+# .ipynb
+*.sh
+data/raw_data/grid4x4/*.xml
+data/raw_data/grid4x4/*.pdf
+# *.ipynb
+history_save/
+soft/
+collected/
+.zshrc
+vis.ipynb
+logs/*
+# configs/
+data/cifar-10-python.tar.gz
+note.txt
+prompt_data/ChatGPT/collect_data/experience.txt
+prompt_data/ChatGPT/collect_data/experience_large.txt
