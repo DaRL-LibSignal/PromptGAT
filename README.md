@@ -7,4 +7,6 @@
 
  Please fill your Open-AI api-key in the file `sim2real_trainer.py` to make sure the conversation to language agent is successfully connected!
 
- 
+ Please make sure install the `requirements.txt` file before execution.
+
+ To execute the code, please execute the `sim2real.py` directly in the root folder.
