@@ -1,0 +1,71 @@
+includes:
+  - configs/tsc/base.yml
+
+model:
+  name: mplight
+  train_model: True
+  n_layers: 2
+  rotation: true
+  conflict_matrix: true
+  merge: multiply
+  d_dense: 20
+  learning_rate: 0.001
+  batch_size: 32
+  gamma: 0.99
+  eps_start: 1.0
+  eps_end: 0.0
+  eps_decay: 220
+  target_update: 500
+  demand_shape: 1
+  phase: True
+
+trainer: 
+  learning_start: -1
+  buffer_size: 10000
+
+world:
+  signal_config: {
+    grid4x4: {
+      # phases: ['NT_ST','NL_SL','NT_NL','ST_SL','ET_WT','EL_WL','WT_WL','ET_EL']
+      phase_pairs: [[1, 7], [2, 8], [1, 2], [7, 8], [4, 10], [5, 11], [10, 11], [4, 5]],
+      valid_acts: null
+    },
+    hz1x1: {
+      # phases: ['ET_WT','NT_ST','EL_WL','NL_SL','WT_WL','ET_EL','ST_SL','NT_NL']
+      phase_pairs: [[2, 6], [0, 4], [3, 7], [1, 5], [6, 7], [2, 3], [4, 5], [0, 1]],
+      valid_acts: null
+    },
+    hz4x4: {
+      # phases: ['ET_WT','NT_ST','EL_WL','NL_SL','WT_WL','ET_EL','ST_SL','NT_NL']
+      phase_pairs: [[4, 10], [1, 7], [5, 11], [2, 8], [10, 11], [4, 5], [7, 8], [1, 2]],
+      valid_acts: null
+    },
+    cologne1: {
+      # phases: ['ET_WT','EL_WL','NT_ST','NL_SL']
+      phase_pairs: [[2, 6], [3, 7], [0, 4], [1, 5]],
+      valid_acts: null
+    },
+    cologne3: {
+      #     phases: ['NT_ST','NL_SL','NL_NT','SL_ST','ET_WT','EL_WL','WT_WL','EL_ET']
+      phase_pairs: [[1, 7], [2, 8], [1, 2], [7, 8], [4, 10], [5, 11], [10, 11], [4, 5]],
+      valid_acts: {
+        # ['NT_ST','NL_SL','WT_ET','WL_EL']
+        'cluster_2415878664_254486231_359566_359576': {0: 0, 1: 1, 4: 2, 5: 3},
+        # ['NT_ST','SL_NL','WT_ET','WL_EL']
+        '360086': {0: 0, 1: 1, 4: 2, 5: 3},
+        # ['NT_ST','NL_SL','ET_EL']
+        '360082': {0: 0, 1: 1, 7: 2}
+      },
+      # lane_order: 0(NR),1(NT),2(NL),3(ER),4(ET),5(EL),6(SR),7(ST),8(SL),9(WR),10(WT),11(WL)
+      # key of lane_ordr: order in world(as well as observation order)
+      # value of lane_order: increasing order
+      lane_order: {
+        # NT,NL,ET,ST,SL
+        '360082': {1: 0, 2: 1, 4: 2, 7: 3, 8: 4},
+        # NT,NL,ET,ST,SL,WT
+        '360086': {1: 0, 2: 1, 4: 2, 7: 3, 8: 4, 10: 5},
+        # NT,NL,ET,EL,ST,SL,WT,WL
+        'cluster_2415878664_254486231_359566_359576': {1: 0, 2: 1, 4: 2, 5: 3, 7: 4, 8: 5, 10: 6, 11: 7}
+      }
+    }
+  }

@@ -1,0 +1,66 @@
+task:
+  description: use RL methods to optimize traffic signal control problems
+  task_name: sim2real
+
+world:
+# necessary and distinctive parameters for simulators
+  interval: 1.0
+  seed: 3047
+  dir: data/
+
+  saveReplay: False
+  report_log_mode: normal # cbengine
+  report_log_rate: 5
+
+  no_warning: True
+  gui:  False
+
+  rlTrafficLight: True
+
+trainer:
+  thread: 8
+  ngpu: -1
+  learning_start: 5000
+  buffer_size: 5000
+  steps: 3600
+  test_steps: 3600
+  yellow_length: 5
+  action_interval: 10
+  episodes: 1 # control the total episode running on x_axis
+  update_model_rate: 1
+  update_target_rate: 5
+  alpha: 0.5
+
+model:
+  name: "non-rl"
+
+  train_model: False
+  test_model: False
+  load_model: False
+  graphic: False
+  vehicle_max: 1 # TODO: what is this for
+  learning_rate: 0.001
+  batch_size: 64
+  gamma: 0.98
+  epsilon: 0.1 # original:0.1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.01 # original: 0.01
+  grad_clip: 0.5
+
+  one_hot: False
+  phase: False
+
+logger:
+  root_dir: "data/output_data/"
+  log_dir: "logger/"
+  replay_dir: "replay/"
+  model_dir: "model/"
+  data_dir: "dataset/"
+  save_model: False
+  save_rate: 1
+  attention: False
+
+
+
+
+
