@@ -8,8 +8,13 @@
  `LLM Powered Sim-to-real Transfer for Traffic Signal Control`
  Before publish proceedings complete, You can find on an arXiv version here:
  https://arxiv.org/pdf/2308.14284.pdf
-
-
+ 
+ An illustration of our method (PromptGAT) compared to Vanilla GAT:    
+ ![Illustration](/assets/image2.png "Demonstration of our method compared to Vanilla GAT")
+ 
+ Detailed Structure of PromptGAT (for more introduction, please refer to our paper above):  
+ ![Illustration](/assets/demo_image.png "Detailed Structure of PromptGAT")
+ 
  This Project is built opon the code of paper: "Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control" But annotated the uncertainty module to not working.
 
  The overall project is built based on LibSignal: https://darl-libsignal.github.io/
