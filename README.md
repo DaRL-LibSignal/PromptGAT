@@ -30,10 +30,13 @@
  ## Citation
 If you find this work helpful, please cite us:
 ```
-@article{da2023llm,
-  title={Llm powered sim-to-real transfer for traffic signal control},
-  author={Da, Longchao and Gao, Minchiuan and Mei, Hao and Wei, Hua},
-  journal={arXiv preprint arXiv:2308.14284},
-  year={2023}
+@inproceedings{da2024prompt,
+  title={Prompt to Transfer: Sim-to-Real Transfer for Traffic Signal Control with Prompt Learning},
+  author={Da, Longchao and Gao, Minquan and Mei, Hao and Wei, Hua},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={1},
+  pages={82--90},
+  year={2024}
 }
 ```
