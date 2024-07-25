@@ -8,7 +8,7 @@
 
 This docker code base is from a sister paper of sim2real tsc, you can simply replace the code with current repository: 
 
-> Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control (https://github.com/DaRL-LibSignal/PromptGAT)
+> Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control (https://github.com/darl-libsignal/ugat)
 
 `docker pull danielda1/ugat:latest`
 
