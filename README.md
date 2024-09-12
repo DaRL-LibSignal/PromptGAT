@@ -3,7 +3,7 @@
 
 ## 🚀 🚀 🚀
 ## We have created a docker image for your convenience 
-## <span style="color:red">(Start sim-to-real for TSC by single line)!</span>
+## <span style="color:red">(Start sim-to-real for TSC by a single command)!</span>
 
 
 
@@ -20,7 +20,7 @@ For this repo's paper:  AAAI24: Prompt to Transfer: Sim-to-Real Transfer for Tra
 `python sim2real.py`
 
 ## At the same time of using this Docker Image, you have the the readily prepared LibSignal
-This is a multi-simulator supported framework, provide easy-to-configure settings for sim-to-sim simulated sim-to-real training and testing.
+This is a multi-simulator-supported framework that provides easy-to-configure settings for sim-to-sim simulated sim-to-real training and testing.
 For details, please visit: https://darl-libsignal.github.io/
 
 
@@ -57,14 +57,14 @@ Stay in the same docker environment, go to command line:
  Detailed Structure of PromptGAT (for more introduction, please refer to our paper above):  
  ![Illustration](/assets/demo_image.png "Detailed Structure of PromptGAT")
  
- This Project is built opon the code of paper: "Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control" But annotated the uncertainty module to not working.
+ This project is built on the code of the paper: "Uncertainty-aware Grounded Action Transformation towards Sim-to-Real Transfer for Traffic Signal Control," but the uncertainty module is annotated as not working.
 
  The overall project is built based on LibSignal: https://darl-libsignal.github.io/
 
  ## Instruction:
- Please fill your Open-AI api-key in the file `sim2real_trainer.py` to make sure the conversation to language agent is successfully connected!
+ Please fill in your Open-AI key in the file `sim2real_trainer.py` to make sure the conversation with the language agent is successfully connected!
 
- Please make sure install the `requirements.txt` file before execution.
+ Please make sure to install the `requirements.txt` file before execution.
 
  To execute the code, please execute the `sim2real.py` directly in the root folder.
 
